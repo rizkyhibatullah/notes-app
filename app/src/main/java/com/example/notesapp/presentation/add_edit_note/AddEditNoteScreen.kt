@@ -1,6 +1,7 @@
 package com.example.notesapp.presentation.add_edit_note
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -47,6 +48,15 @@ fun AddEditNoteScreen(
                 onValueChange = { title = it },
                 label = { Text("Title") },
                 modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.padding(8.dp))
+            OutlinedTextField(
+                value = content,
+                onValueChange = { content = it },
+                label = { Text("Content") },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
             )
         }
     }
